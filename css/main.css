@@ -1,0 +1,649 @@
+/*Utility Class*/
+.hide
+{
+	display: none;
+}
+
+/* General rules - scales images, videos to size of container */
+img, embed, object, video
+{
+  max-width: 100%;
+}
+
+html
+{
+  box-sizing: border-box;
+}
+
+*, *::before, *::after
+{
+  box-sizing: inherit;
+}
+
+/* General rules for elements */
+
+body{
+	font-family: 'Lato', Helvetica, sans-serif;
+	background-color: #fff;
+}
+
+a{
+	text-decoration: none;
+	transition: all .1s linear;
+}
+
+.container{
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+/* Header and Nav */
+#mainHeader{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#mainNav{
+	text-align: right;
+}
+
+#burgerCon{
+	margin-top: 20px;
+	display: none;
+}
+
+#burgerCon.slideToggle{
+	display: block;
+}
+
+#mainNav button {
+	background: url(../img/burger.svg) center no-repeat;
+	border: 0px;
+	width: 20px;
+	height: 20px;
+	transition: all .1s ease;
+}
+
+#mainNav button.expanded{
+	transform: rotate(90deg);
+}
+
+#mainNav li a{
+	display: block;
+	padding: 10px 0 10px 0;
+	text-align: center;
+	color: #8ea76d;
+}
+
+#mainNav li {
+	border-bottom: 1px solid #efefef;
+}
+
+#mainNav li:first-child{
+	border-top: 1px solid #efefef;
+}
+
+#mainNav li:last-child{
+	margin-bottom: 10px;
+}
+
+#mainNav li a:hover{
+	background-color: #efefef;
+}
+
+.actionButton{
+	background-color: #CDD36E;
+	display: block;
+	width: 170px;
+	padding: 20px 5px 20px 5px;
+	color: #fff;
+	text-align: center;
+	border-radius: 10px;
+	margin: 20px auto 0 auto;
+	font-size: 15px;
+	transition: all .5s ease;
+}
+
+.actionButton:hover{
+	border-radius: 10px;
+	background-color: #C4C979;
+}
+
+#wollastonLogo{
+	max-width: 130px;
+	display: block;
+	margin: 20px auto 25px auto;
+}
+
+/* Pano area */
+#pano{
+	height: 240px;
+	background-image: url(../img/golf-course-m.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* image switching for retina screens */
+@media screen and (min-resolution: 200dpi),
+				screen and (min-resolution: 1.25dppx) {
+			#pano
+			{
+				background-image: url(../img/golf-course-m@2x.jpg);
+			}
+}
+
+#pano h2{
+	font-size: 22px;
+	font-weight: 900;
+	color: #fff;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#pano p{
+	font-size: 12px;
+	color: #fff;
+	line-height: 20px;
+	margin: 0 auto 30px auto;
+}
+
+#learnMore{
+	display: block;
+	width: 130px;
+	padding: 15px 0;
+	border: solid 1px #fff;
+	font-size: 15px;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+}
+
+#learnMore:hover{
+	background-color: rgba(76,97,88,.8);
+}
+
+#serviceCon{
+	background-color: #efefef;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	/* collapsing margin issue fix, on club house */
+	padding-bottom: 1px;
+}
+
+#teeIcon{
+	max-width: 16px;
+	display: block;
+	margin: 0 auto;
+}
+
+#serviceCon header h2 {
+	text-align: center;
+	margin-top: 10px;
+	font-weight: 700;
+	color: #707070;
+}
+
+#services header h2:after{
+	content: "";
+	display: block;
+	width: 70px;
+	border-bottom: 2px solid #819B4B;
+	margin: 10px auto 20px auto;
+}
+
+.serviceBox {
+	/* serviceBorderBox will now use this corner for absolute position */
+	position: relative;
+	/* background-color: red; */
+	margin-top: 20px;
+	margin-bottom: 170px;
+}
+
+.serviceBorderBox {
+	width: 220px;
+	height: 150px;
+	background: #fff;
+	border: 1px solid #707070;
+	position: absolute;
+	top: 170px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	outline: 10px solid #fff;
+	padding: 20px 10px 10px 10px;
+}
+
+#services section h2{
+	color: #707070;
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+#services section h2:after{
+	content: "";
+	display: block;
+	width: 30px;
+	border-bottom: 2px solid #819b4b;
+	margin: 10px auto 15px auto;
+}
+
+#services section p{
+	font-size: 12px;
+	line-height: 16px;
+	color: #707070;
+	font-weight: 300;
+}
+
+#services section img{
+	display: block;
+	margin: 0 auto;
+}
+#iconTitlePro{
+	width: 170px;
+	margin: 0 auto;
+	/* background-color: red; */
+	background: url(../img/proshop-icon.svg) no-repeat;
+	background-size: 20px;
+	padding-top: 5px;
+}
+
+#iconTitleCarts{
+	width: 170px;
+	margin: 0 auto;
+	background-color: red;
+	background: url(../img/golfcarts-icon.svg) no-repeat;
+	background-size: 20px;
+	padding-top: 5px;
+}
+
+#iconTitleClub{
+	width: 170px;
+	margin: 0 auto;
+	background-color: red;
+	background: url(../img/clubhouse-icon.svg) no-repeat;
+	background-size: 20px;
+	padding-top: 5px;
+}
+
+#membershipCon{
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+#planSelectorCon h2{
+	color: #707070;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+
+#planSelectorCon p{
+	color: #707070;
+	line-height: 22px;
+	font-weight: 300;
+}
+
+#planSelectorCon ul{
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#planSelectorCon ul li{
+	display: inline;
+	margin-right: 10px;
+	color: #707070;
+	cursor: pointer;
+	transition: all .2s ease;
+}
+
+#planSelectorCon ul li:last-child{
+	margin-right: 0;
+}
+
+#planSelectorCon li:hover{
+	border-bottom: 2px solid #819B4B;
+}
+
+.membershipPlans{
+	background-color: #efefef;
+	text-align: center;
+	border-radius: 10px 10px 0px 0px;
+	max-width: 400px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+.membershipPlans h2{
+	color: #fff;
+	background-color: #707070;
+	border-radius: 10px 10px 0px 0px;
+	padding: 20px 0 20px 0;
+	font-weight: 700;
+	font-size: 26px;
+}
+
+.membershipPlans h3{
+	color: #707070;
+	margin-top: 10px;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+
+.membershipPlans p{
+	font-size: 10px;
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+
+.membershipPlans ul{
+	border-top: 1px solid #C9C5C5;
+	padding-top: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #707070;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.membershipPlans ul li{
+	margin-bottom: 10px;
+}
+
+#gold, #senior{
+	display: none;
+}
+
+#mainFooter{
+	height: 200px;
+	background: url(../img/footer.jpg) no-repeat center top;
+	padding-top: 10px;
+}
+
+#mainFooter section
+{
+	margin-left: 15px;
+	margin-right: 15px;
+	text-align: center;
+	color: white;
+}
+
+#mainFooter section h2:after{
+	content: "";
+	display: block;
+	width: 70px;
+	border-bottom: 2px solid #fff;
+	margin: 15px auto 15px auto;
+}
+
+#mainFooter section p, #mainFooter section a{
+	color: #fff;
+	font-size: 12px;
+	font-weight: 300;
+}
+
+#mainFooter p{
+	margin-bottom: 15px;
+}
+
+#mainFooter img{
+	width: 12px;
+	position: relative;
+	top: 5px;
+	margin-right: 5px;
+}
+
+@media screen and (min-width: 500px){
+	#pano p{
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 640px){
+	#planSelectorCon p {
+		width: 95%;
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 768px){
+	.gridCon{
+		display: grid;
+		grid-template-columns: repeat(9, minmax(0,1fr));
+		grid-column-gap: 30px;
+	}
+
+	#logoCon{
+		order: -1;
+		grid-column: 1/3;
+		margin-top: 10px;
+	}
+	#wollastonLogo{
+		margin: 0;
+		display: inline;
+		max-width: 162px;
+	}
+	#burgerCon{
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+	}
+	#mainNav{
+		grid-column: 4/-1;
+	}
+
+	#mainNav li{
+		border-bottom: none;
+		display: inline;
+		margin-left: 20px;
+	}
+	#mainNav li a{
+		display: inline;
+		background-color: #fff;
+		color: #6d6d6c;
+	}
+	#mainNav li a:hover{
+		color: #8fa771;
+		border-bottom: 3px solid #8fa771;
+		padding-bottom: 5px;
+		background-color: transparent;
+	}
+
+	.actionButton
+	{
+		order: -1;
+		margin: 10px 0 42px auto;
+	}
+
+	#burgerCon{
+		margin-bottom: 40px;
+	}
+	#button{
+		display: none;
+	}
+
+	#mainNav li:first-child {
+		border-top: none;
+	}
+	#pano h2{
+		font-size: 42px;
+	}
+	#pano p{
+		width: 545px;
+	}
+	#learnMore{
+		width: 170px;
+	}
+
+	#services header {
+		grid-column: 1/-1;
+	}
+	#proShop{
+		grid-column: 1/4;
+	}
+	#carts{
+		grid-column: 4/7;
+	}
+	#clubHouse{
+		grid-column: 7/-1;
+	}
+	.serviceBorderBox{
+		width: 80%;
+		top: 130px;
+		height: 170px;
+	}
+
+	#iconTitlePro, #iconTitleCarts, #iconTitleClub{
+		width: auto;
+	}
+
+	#planSelector{
+		display: none;
+	}
+	#planSelectorCon{
+		grid-column: 2/9;
+		margin-bottom: 30px;
+	}
+	.membershipPlans{
+		max-width: none;
+		margin: 0;
+	}
+	#gold, #senior{
+		display: block;
+	}
+	#junior{
+		grid-column: 1/4;
+	}
+	#gold{
+		grid-column: 4/7;
+	}
+	#senior{
+		grid-column: 7/-1;
+	}
+	.membershipPlans .actionButton{
+		margin: 0 auto;
+	}
+	#marginFooter section{
+		margin-top: 10px;
+	}
+	#mainFooter{
+		background: url(../img/footer-desktop.jpg) no-repeat center;
+		}
+		@media screen and (min-resolution: 200dpi),
+		screen and (min-resolution: 1.25dppx){
+			#mainFooter{
+				background-image: url(../img/footer@2x.jpg);
+				background-size: cover;
+			}
+		}
+}
+
+@media screen and (min-width: 800px){
+	.serviceBorderBox{
+		width: 80%;
+		top: 90%;
+		height: 60px;
+	}
+}
+
+@media screen and (min-width: 1140px){
+	.container{
+		box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+	}
+	#pano{
+		height: 360px;
+		background-image: url(../img/golf-course-desktop.jpg);
+		background-size: cover;
+	}
+	@media screen and (min-resolution: 200dpi),
+				 screen and (min-resolution: 1.25dppx){
+					#pano
+					{
+						background-image: url(../img/golf-course-desktop@2x.jpg);
+					}
+	}
+
+	#pano h2{
+		font-size: 56px;
+	}
+
+	#pano p{
+		font-size: 16px;
+		line-height: 26px;
+		width: 720px;
+	}
+
+	#learnMore{
+		margin-top: 80px;
+	}
+
+	#serviceCon{
+		padding-top: 30px;
+	}
+	#teeIcon{
+		max-width: 25px;
+	}
+	#services header h2{
+		font-size: 31px;
+	}
+	#services header h2::after{
+		margin-bottom: 20px;
+	}
+	.serviceBox{
+		margin-bottom: 220px;
+	}
+
+	.serviceBorderBox{
+		width: 280px;
+		top: 90%;
+		height: 190px;
+	}
+	#services section p{
+		font-size: 15px;
+		line-height: 22px;
+	}
+
+	#services section h2{
+		font-size: 22px;
+	}
+
+	#services section h2:after{
+		width: 50px;
+	}
+
+	#iconTitlePro, #iconTitleCarts, #iconTitleClub{
+		width: 240px;
+		background: 25px;
+	}
+
+	#junior{
+		grid-column: 2/4;
+	}
+	#senior{
+		grid-column: 7/9;
+	}
+
+	#mainFooter{
+		height: 262px;
+	}
+
+	#mainFooter section h2{
+		font-size: 22px;
+	}
+
+	#mainFooter section p, #mainFooter section a{
+		font-size: 16px;
+	}
+}
